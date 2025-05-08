@@ -1,0 +1,125 @@
+@font-face {
+  font-family: Prata;
+  src: url(../assets/fonts/Prata-Regular.ttf);
+}
+
+@import "variables";
+
+// BASE PAGE STYLES
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  background: transparent;
+  height: 100%;
+  letter-spacing: 1px;
+  text-align: center;
+  body {
+    background: change-color($black, $lightness: 100%);
+    background: -o-linear-gradient(330deg, rgba(change-color($teal, $lightness: 86%), 0.2), change-color($black, $lightness: 100%)) fixed;
+    background: linear-gradient(120deg, rgba(change-color($teal, $lightness: 86%), 0.2), change-color($black, $lightness: 100%)) fixed;
+    color: change-color($black, $lightness: 20%);
+    min-height: 100%;
+    -ms-scroll-chaining: none;
+    overscroll-behavior: none;
+    padding: 0 20px;
+    position: relative;
+    header {
+      padding-top: 6%;
+    }
+    main {
+      padding-bottom: 6rem;
+    }
+    footer {
+      background: change-color($teal, $lightness: 86%);
+      background: -webkit-gradient(linear, left top, right top, from(change-color($teal, $lightness: 86%)), to(change-color($teal, $lightness: 95%))) fixed;
+      background: -o-linear-gradient(left, change-color($teal, $lightness: 86%), change-color($teal, $lightness: 95%)) fixed;
+      background: linear-gradient(to right, change-color($teal, $lightness: 86%), change-color($teal, $lightness: 95%)) fixed;
+      bottom: 0;
+      font-size: 0.8rem;
+      left: 0;
+      letter-spacing: 2px;
+      padding: 14px 0;
+      position: absolute;
+      right: 0;
+      width: 100%;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 0;
+    }
+    h1 {
+      color: $teal;
+      font-family: $heading-font;
+      font-size: 1.7rem;
+      font-weight: 400;
+      letter-spacing: 4px;
+      line-height: 1.45;
+    }
+  }
+}
+
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  color: $teal;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a:focus,
+button:focus,
+details:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[tabindex]:focus {
+  -webkit-box-shadow: 0 0 3px 3px hsla(203, 95%, 62%, 0.8);
+  box-shadow: 0 0 3px 3px hsla(203, 95%, 62%, 0.8);
+  outline: none;
+}
+
+// Message styles
+.message {
+  border-radius: 5px;
+  line-height: 1.55;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 15px 10px;
+}
+
+.error-message {
+  background: change-color($error-red, $lightness: 95%);
+  border: 1px solid change-color($error-red, $lightness: 90%);
+  color: $error-red;
+}
+
+.info-message {
+  background: change-color($info-blue, $lightness: 95%);
+  border: 1px solid change-color($info-blue, $lightness: 90%);
+  color: $info-blue;
+}
+
+noscript .info-message {
+  left: 50%;
+  margin: 0 auto;
+  min-width: 280px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@import "main";
